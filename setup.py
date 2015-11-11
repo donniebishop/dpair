@@ -6,4 +6,5 @@ setup(name='dpair',
       author='Donnie Bishop',
       author_email='donnie.a.bishop@gmail.com',
       license='Apache 2.0',
+      data_files=[('assets', ['google-10000-english.txt'])]
       )
