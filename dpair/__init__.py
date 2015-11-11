@@ -58,10 +58,12 @@ def gen(words=5, min_length=20, lower=False, custom_wordlist=None):
     "Generates passphrase using randomly selected words."
     # Like a dictionary password attack in reverse!!!
     wordlist = get_word_list(custom_wordlist)
-    dictionary_choices = word_generator(wordlist, words)
     passphrase = ''
 
     while len(passphrase) < min_length:
+        passphrase = ''
+        dictionary_choices = word_generator(wordlist, words)
+
         phrase_list = []
 
         for w in dictionary_choices:
