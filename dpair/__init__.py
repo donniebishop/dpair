@@ -31,7 +31,7 @@ def get_word_list(custom_wordlist=None):
     if custom_wordlist and os.path.isfile(custom_wordlist):
         wordlist = custom_wordlist
     else:
-        wordlist = os.path.join(os.path.realpath(__name__), 'assets', 'google-10000-english.txt')
+        wordlist = os.path.join(os.path.dirname(__file__), 'assets', 'google-10000-english.txt')
 
     try:
         if not os.path.isfile(wordlist):
